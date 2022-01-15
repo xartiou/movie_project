@@ -6,7 +6,12 @@
     <h2>Список всех фильмов</h2>
     <ul>
         {% for movie in movies %}
-            <li><a href="{{movie.get_url}}">{{ movie.name }}</a>, год - {{ movie.year|default:'Скоро будет' }}, рейтинг - {{ movie.rating }}</li>
+            <li><a href="{{movie.get_url}}">{{ movie.name }}</a>,
+                год - {{ movie.year|default:'Скоро будет' }},
+                рейтинг - {{ movie.rating }},
+                бюджет - {{ movie.budget }}
+            </li>
+
         {% endfor %}
     </ul>
 {% endblock %}
