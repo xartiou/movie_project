@@ -11,5 +11,5 @@ class Movie(models.Model):
     budget = models.IntegerField(default=10)
 
     def __str__(self):
-        return f'{self.name} - {self.rating}%'
+        return f'{self.name}  - {self.rating}%'
 

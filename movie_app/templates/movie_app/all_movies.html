@@ -1,0 +1,13 @@
+{% extends 'movie_app/base.html' %}
+
+{% block title %} Все фильмы {% endblock %}
+
+{% block content %}
+    <h2>Список всех фильмов</h2>
+    <ul>
+        {% for movie in movies %}
+            <li>{{ movie.name }}, год - {{ movie.year|default:'Скоро будет' }}, рейтинг - {{ movie.rating }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
+
